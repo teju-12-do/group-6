@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #be8652e4;
+      color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 5px;
+    }
+    nav {
+      background: #444444;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      padding: 15px 20px;
+      display: block;
+    }
+    nav a:hover,
+    nav a.active {
+      background: #232b7f09;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    #about {
+      background: #f4f4f4;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    #projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      border: 1px solid #4ab4a2c8;
+      border-radius: 10px;
+      padding: 20px;
+      background: #12826fc4;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+      border-color: #ff6600;
+    }
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    #contact input,
+    #contact textarea,
+    #contact button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #contact button {
+      background: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    #contact button:hover {
+      background: #ff6600;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="home">
+    <h1>John Doe</h1>
+    <p>Web Developer | Designer | Learner</p>
+  </header>
+  <!-- Navigation -->
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href=""C:\Users\Hp\Downloads\LOGO-removebg-preview (3).png">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m John, a passionate web developer who loves creating interactive and user-friendly websites.</p>
+    <p>I enjoy learning new technologies and building creative digital solutions.</p>
+  </section>
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>A simple portfolio website built using HTML, CSS, and JavaScript to showcase my skills.</p>
+    </div>
+    <div class="project-card">
+      <h3>To-Do App</h3>
+      <p>A task management app that helps users organize daily tasks with a clean interface.</p>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  <!-- Script for active nav -->
+  <script>
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
